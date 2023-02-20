@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: java-springboot-hello-docker-dn7c
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: java-springboot-hello-docker-dn7c
+    app.kubernetes.io/part-of: ec-test
+  name: java-springboot-hello-docker-dn7c
+  namespace: zregvart-tenant
+spec:
+  ports:
+  - name: http-8081
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: java-springboot-app
+    app.kubernetes.io/instance: java-springboot-hello-docker-dn7c
+status:
+  loadBalancer: {}
