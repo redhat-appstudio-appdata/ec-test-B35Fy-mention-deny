@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: java-springboot-hello-docker-dn7c
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:B35Fy-java-springboot-hello-docker-dn7c
+      - image: quay.io/redhat-appstudio/user-workload@sha256:17fa352298f0bad63f922987df115fb9bfb3d7df0aa545bcd3e39bff49111a22
         name: my-java-springboot
         ports:
         - containerPort: 8081
