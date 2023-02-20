@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: java-springboot-hello-docker-dn7c
+  namespace: zregvart-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:17fa352298f0bad63f922987df115fb9bfb3d7df0aa545bcd3e39bff49111a22
+        name: my-java-springboot
+        resources: {}
+status: {}
